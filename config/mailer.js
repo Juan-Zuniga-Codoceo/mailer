@@ -1,5 +1,6 @@
 import nodemailer from 'nodemailer';
-import 'dotenv/config';
+//import 'dotenv/config'; // Al instalar dotenv se debe importar para node v 20
+process.loadEnvFile();// Para no instalar ni importar dotenv, para node v 21 en adelante
 
 const {USER_EMAIL,USER_PASS} = process.env;
 
